@@ -17,7 +17,7 @@ Step 3:  70 % 10 == 0
 This card is valid!
 =end
 
-# Here's a very lengthy implementation using the basic iterators and enumeration I'm familiar with so far!
+# Here's a very lengthy implementation using basic iterators and enumeration I'm familiar with so far!
 
 def valid_credit_card?(num)
 # Split the string into an array so we can work with each digit
