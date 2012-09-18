@@ -1,20 +1,25 @@
-class FizzBuzz
-	def Fizz1
-		(1..100).each do |x|
-			print x unless x % 3 == 0 or x % 5 == 0
-			print "Fizz" if x % 3 == 0
-			print "Buzz" if x % 5 == 0
-			print "\n"
+def valid_credit_card?(num)
+	card = num.split(//).reverse.each_with_index.map do |num, index| 
+		if index % 2 != 0 then
+			num.to_i * 2
+		else
+			num.to_i
 		end
-	end
-
-	def Fizz2
-		(1..100).each do |x|
-			str = [("Fizz" if x % 3 == 0),("Buzz" if x % 5 == 0)].compact.join
-			if str == "" then str << x.to_s end
-			puts str		
-		end
-	end
+	end	
+	card.to_s
+	.gsub(/,/,'')
+	.gsub(/\[/,'')
+	.gsub(/\]/,'')
+	.gsub(/ /,'')
+	.split('')
+	.map {|i| i.to_i}
+	.reduce(:+) % 10 == 0
 end
 
-FizzBuzz.new.Fizz1
+
+p valid_credit_card?("1234567890123456")
+p valid_credit_card?("4408041234567893")
+p valid_credit_card?("440804l234567893")
+p valid_credit_card?("38520000023237")
+p valid_credit_card?("4222222222222")
+
