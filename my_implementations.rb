@@ -72,3 +72,4 @@ class Array
 end
 
 p %w(r u b y).my_map { |letter| letter.upcase }
+
