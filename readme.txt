@@ -2,7 +2,6 @@ Single file ruby programs are contained here for my tinkering.
 
 Basic programs - Beginner programs, basic concepts tested
 
-
 Root - One offs of various ruby programs 
 
 -CC# Validation 
