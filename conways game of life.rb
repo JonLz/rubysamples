@@ -6,7 +6,7 @@
 # Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 #
 # A very memory inefficient solution.  Damn is R-Pentomino not awesome though?!?
-##
+## 
 
 LIVE_CELL = ?*
 DEAD_CELL = ?.
